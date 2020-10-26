@@ -7,26 +7,42 @@
     function waktu() {
         var tanggal = new Date();
         setTimeout("waktu()",1000);
-        document.getElementById("jam").innerHTML = tanggal.getHours();
-        document.getElementById("menit").innerHTML = tanggal.getMinutes();
-        document.getElementById("detik").innerHTML = tanggal.getSeconds();
+        document.getElementById("jam").innerHTML = ('0' + tanggal.getHours()).slice(-2);
+        document.getElementById("menit").innerHTML = ('0' + tanggal.getMinutes()).slice(-2);
+        document.getElementById("detik").innerHTML = ('0' + tanggal.getSeconds()).slice(-2);
+        
+        let body = document.getElementById("my-body");
+        let periode = null;
+
+        // if(tanggal.getSeconds() <= 15){
+        //     periode = "pagi";
+        // }else if(tanggal.getSeconds() <= 30){
+        //     periode = "siang";
+        // }else if(tanggal.getSeconds() <= 45){
+        //     periode = "sore";
+        // }else if(tanggal.getSeconds() <= 60){
+        //     periode = "malam";
+        // }
+
+        // body.setAttribute("class", periode);
     }
 </script>
+<!-- STYLING IS HERE -->
+<link href="style.css" rel="stylesheet"/>
 </head>
-
-<style>
-    #jam-digital{overflow:hidden; width:350px}
-    #hours{float:left; width:100px; height:50px; background-color:#6B9AB8; margin-right:25px}
-    #minute{float:left; width:100px; height:50px; background-color:#A5B1CB}
-    #second{float:right; width:100px; height:50px; background-color:#FF618A; margin-left:25px}
-    #jam-digital p{color:#000; font-size:36px; text-align:center; margin-top:4px}
-</style>
-
-<body onLoad="waktu()">
-    <div id="jam-digital">
-        <div id="hours"><p id="jam"></p></div>
-        <div id="minute"><p id="menit"></p></div>
-        <div id="second"><p id="detik"></p></div>
+<body id="my-body" onLoad="waktu()">
+    <div class="my-card">
+        <div class="my-card-image">
+            <svg style="margin-top: 47%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,122.7C640,117,800,75,960,64C1120,53,1280,75,1360,85.3L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        </div>
+        <div class="my-card-content">
+            <div id="jam-digital">
+                <div id="jam"></div><div class="separator">:</div>
+                <div id="menit"></div><div class="separator">:</div>
+                <div id="detik"></div>
+            </div>
+            <div class="tanggal">Rabu, 13 Oktober 2020</div>
+        </div>
     </div>
 </table>
 </body>
