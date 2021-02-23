@@ -5,24 +5,22 @@
     <link href="style.css" rel="stylesheet" />
   </head>
 
-  <body id="my-body"">
-    <img
-      src="assets/sun-plain.svg"
-      style="
-        position: fixed;
-        width: 6rem;
-        top: 2rem;
-        left: 2rem;
-        "
-    />
+  <body id="my-body" class="light">
     <div class="container">
-      <h1 id="headline">Good Morning !</h1>
-      <div id="countdown">
-        <ul>
-          <li><span id="jam"></span>Hours</li>
-          <li><span id="menit"></span>Minutes</li>
-          <li><span id="detik"></span>Seconds</li>
-        </ul>
+      <h1 id="headline">
+        <img
+          id="day"
+          src="assets/sun-plain.svg"
+          style="
+              width: 3rem;
+              "
+        />
+        Good Morning
+      </h1>
+      <div class="divider"></div>
+      <div id="timer">
+        <span id="jam"></span>: <span id="menit"></span>:
+        <span id="detik"></span>
       </div>
       <div id="today">Rabu, 13 Oktober 2020</div>
     </div>

@@ -49,4 +49,14 @@ function waktu() {
   document.getElementById("detik").innerText = ("0" + now.getSeconds()).slice(
     -2
   );
+
+  // Change DOM
+  let day = document.getElementById("day").getAttribute("src");
+
+  document.getElementById("my-body").classList = "";
+  if (now.getHours() > 18) {
+    document.getElementById("my-body").classList.add("dark");
+  } else {
+    document.getElementById("my-body").classList.add("light");
+  }
 }
