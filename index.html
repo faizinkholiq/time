@@ -3,13 +3,9 @@
     <title>Now</title>
     <!-- STYLING IS HERE -->
     <link href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="timer.js"></script>
-    <script type="text/javascript">
-      window.setTimeout(waktu(), 1000);
-    </script>
   </head>
 
-  <body id="my-body" onLoad="waktu()">
+  <body id="my-body"">
     <img
       src="assets/sun-plain.svg"
       style="
@@ -28,7 +24,8 @@
           <li><span id="detik"></span>Seconds</li>
         </ul>
       </div>
-      <div class="tanggal">Rabu, 13 Oktober 2020</div>
+      <div id="today">Rabu, 13 Oktober 2020</div>
     </div>
+    <script type="text/javascript" src="timer.js"></script>
   </body>
 </html>

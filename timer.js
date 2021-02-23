@@ -1,20 +1,52 @@
-function waktu() {
-  var tanggal = new Date();
-  setTimeout("waktu()", 1000);
+const tanggal = new Date();
 
-  if (
-    document.getElementById("jam") &&
-    document.getElementById("menit") &&
-    document.getElementById("detik")
-  ) {
-    document.getElementById("jam").innerText = ("0" + tanggal.getHours()).slice(
-      -2
-    );
-    document.getElementById("menit").innerText = (
-      "0" + tanggal.getMinutes()
-    ).slice(-2);
-    document.getElementById("detik").innerText = (
-      "0" + tanggal.getSeconds()
-    ).slice(-2);
-  }
+const hari = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+const bulan = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "Desember"
+];
+
+const today =
+  hari[tanggal.getDay()] +
+  ", " +
+  tanggal.getDate() +
+  " " +
+  bulan[tanggal.getMonth()] +
+  " " +
+  tanggal.getFullYear();
+
+document.getElementById("my-body").onload = function() {
+  document.getElementById("today").innerHTML = today;
+  setInterval(waktu, 1000);
+};
+
+function waktu() {
+  const now = new Date();
+
+  document.getElementById("jam").innerText = ("0" + now.getHours()).slice(-2);
+  document.getElementById("menit").innerText = ("0" + now.getMinutes()).slice(
+    -2
+  );
+  document.getElementById("detik").innerText = ("0" + now.getSeconds()).slice(
+    -2
+  );
 }
