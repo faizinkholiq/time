@@ -1,2 +1,3 @@
-# JamDigital
-Merupakan Jam Digital Yang Dibuat Menggunakan HTML dan Javascript.
+# time
+
+What time is it now?
