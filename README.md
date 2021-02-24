@@ -1,4 +1,4 @@
-# ⌚ Time 
+#Time 
 What time is it now?
 
 <br />
@@ -6,9 +6,9 @@ What time is it now?
 ## A Little bit about us
 ### ️🌃 Screenshots:
 #### 1. Day
- ![Day](https://github.com/faizinkholiq/my_poll/blob/master/raw/day.png?raw=true)
+ ![Day](https://github.com/faizinkholiq/time/blob/master/raw/day.png?raw=true)
 #### 2. Night
- ![Night](https://github.com/faizinkholiq/my_poll/blob/master/raw/night.png?raw=true)
+ ![Night](https://github.com/faizinkholiq/time/blob/master/raw/night.png?raw=true)
 <br />
 
 ## Getting started
